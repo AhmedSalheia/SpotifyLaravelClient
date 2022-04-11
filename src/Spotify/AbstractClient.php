@@ -31,6 +31,7 @@ class AbstractClient
     }
     private function checkUser()
     {
+        var_dump(request()->session()->get('SpotifyUserData'));
         self::$user = request()->session()->get('SpotifyUserData');
     }
 
