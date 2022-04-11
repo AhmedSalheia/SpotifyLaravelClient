@@ -45,10 +45,10 @@ class AbstractClient
     /**
      * @throws \Exception
      */
-    public function sendRequest($type, $route)
+    public function sendRequest($type, $route, $data=[])
     {
         $route = trim($route,'/');
-        return \Http::withToken($this->token())->$type($this->url.$route)->json();
+        return \Http::withToken($this->token())->$type($this->url.$route, $data)->json();
     }
 
 }

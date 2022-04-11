@@ -18,6 +18,9 @@ class UsersProfileClient extends AbstractClient
 
     public function user()
     {
+        if ($this->userId===null)
+            throw new \RuntimeException('Must Provide UserId',400);
+
         return $this->sendRequest('get', '/users/'.$this->userId);
     }
 }
