@@ -24,7 +24,7 @@ class AbstractClient
     public static function makeInstance(...$args)
     {
         if (empty(self::$instances[static::class]))
-            self::$instances[static::class] = new static($args);
+            self::$instances[static::class] = new static(...$args);
         return self::$instances[static::class];
     }
 
