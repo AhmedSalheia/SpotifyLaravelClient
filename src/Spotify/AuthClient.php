@@ -79,6 +79,7 @@ class AuthClient extends AbstractClient
         self::$user = $this->sendRequest('get', 'me');
         self::$user['token'] = $token_data;
 
+        request()->session()->put('SpotifyUserData',self::$user);
         return self::$user;
     }
 }

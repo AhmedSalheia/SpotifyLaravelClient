@@ -19,6 +19,8 @@ class AbstractClient
         self::$clientId = env('SPOTIFY_CLIENT_ID');
         self::$clientSecret = env('SPOTIFY_CLIENT_SECRET');
         self::$redirectUrl = env('SPOTIFY_REDIRECT_URI');
+
+        $this->checkUser();
     }
 
     public static function makeInstance($args)
@@ -26,6 +28,10 @@ class AbstractClient
         if (empty(self::$instances[static::class]))
             self::$instances[static::class] = new static(...$args);
         return self::$instances[static::class];
+    }
+    private function checkUser()
+    {
+        self::$user = request()->session()->get('SpotifyUserData');
     }
 
     protected function isValidState() : bool
