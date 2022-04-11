@@ -7,6 +7,8 @@ class UsersProfileClient extends AbstractClient
     private string $userId;
     public function __construct($userId=null)
     {
+        var_dump($userId);
+        parent::__construct();
         $this->userId = $userId;
     }
 
