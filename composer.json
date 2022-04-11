@@ -1,5 +1,5 @@
 {
-    "name": "ahmed/spotify-client",
+    "name": "AhmedSalheia/spotify-client",
     "description": "Easily add new or override built-in providers in Laravel Socialite.",
     "type": "library",
     "keywords": [
