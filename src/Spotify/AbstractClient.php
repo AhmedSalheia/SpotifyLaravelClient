@@ -23,9 +23,10 @@ class AbstractClient
 
     public static function makeInstance($args)
     {
-        if (empty(self::$instances[static::class]))
-            self::$instances[static::class] = new static($args);
-        return self::$instances[static::class];
+        var_dump($args);
+//        if (empty(self::$instances[static::class]))
+//            self::$instances[static::class] = new static($args);
+//        return self::$instances[static::class];
     }
 
     protected function isValidState() : bool
