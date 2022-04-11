@@ -12,6 +12,6 @@ class SpotifyClient
         $class = "App\Http\Helpers\Spotify\\".ucfirst($name).'Client';
         if (class_exists($class))
             return $class::makeInstance();
-        throw new ClassNotFoundException('Class Does Not Exist',$class);
+        throw new ClassNotFoundException("Class {$class} Does Not Exist",$class);
     }
 }
