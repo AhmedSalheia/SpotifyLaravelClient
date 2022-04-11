@@ -23,7 +23,7 @@ class AbstractClient
 
     public static function makeInstance($args)
     {
-        var_dump($args);
+        var_dump(...$args);
 //        if (empty(self::$instances[static::class]))
 //            self::$instances[static::class] = new static($args);
 //        return self::$instances[static::class];
