@@ -9,7 +9,6 @@ class SpotifyClient
 {
     public static function __callStatic($name, $params)
     {
-        var_dump($params);
         $class = "SpotifyClient\Spotify\\".ucfirst($name).'Client';
         if (class_exists($class))
             return $class::makeInstance($params);
