@@ -80,6 +80,5 @@ class AuthClient extends AbstractClient
         self::$user['token'] = $token_data;
 
         return self::$user;
-
     }
 }
