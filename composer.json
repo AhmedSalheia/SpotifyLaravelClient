@@ -1,0 +1,22 @@
+{
+    "name": "ahmed/spotify-client",
+    "description": "Easily add new or override built-in providers in Laravel Socialite.",
+    "keywords": [
+        "laravel",
+        "spotify",
+        "spotify-oauth",
+        "spotify-kit"
+    ],
+    "autoload": {
+        "psr-4": {
+            "SpotifyClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AhmedSalheia",
+            "email": "ahmedsalheia.as@gmail.com"
+        }
+    ],
+    "require": {}
+}
