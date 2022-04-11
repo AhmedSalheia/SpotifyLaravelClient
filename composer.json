@@ -1,6 +1,7 @@
 {
     "name": "ahmed/spotify-client",
     "description": "Easily add new or override built-in providers in Laravel Socialite.",
+    "type": "library",
     "keywords": [
         "laravel",
         "spotify",
@@ -18,5 +19,7 @@
             "email": "ahmedsalheia.as@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.0.2"
+    }
 }
