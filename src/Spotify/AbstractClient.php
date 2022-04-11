@@ -21,10 +21,10 @@ class AbstractClient
         self::$redirectUrl = env('SPOTIFY_REDIRECT_URI');
     }
 
-    public static function makeInstance(...$args)
+    public static function makeInstance($args)
     {
         if (empty(self::$instances[static::class]))
-            self::$instances[static::class] = new static(...$args);
+            self::$instances[static::class] = new static($args);
         return self::$instances[static::class];
     }
 
